@@ -1,9 +1,10 @@
 from layers_gx import LayersGX
-import layers_gx_conn
-
+from dotenv import load_dotenv
 from datetime import datetime, timedelta
-s3_access_key = layers_gx_conn.AWS_KEY
-s3_secret_key = layers_gx_conn.AWS_SECRET
+import os
+load_dotenv()
+s3_access_key = os.getenv('AWS_KEY')
+s3_secret_key = os.getenv('AWS_SECRET')
 aws_region = 'us-east-1'
 
 # BETA
